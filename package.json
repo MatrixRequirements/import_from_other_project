@@ -1,0 +1,30 @@
+{
+  "name": "matrix-ui-plugin-boilerplate",
+  "version": "1.0.0",
+  "description": "Awesome matrix-ui-plugin-boilerplate created by francoischasseur",
+  "repository": {
+    "url": "https://github.com/MatrixRequirements/matrix-ui-plugin-boilerplate"
+  },
+  "scripts": {
+    "pretty": "prettier --write src/",
+    "clean": "rm -rf dist",
+    "check": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --ext .ts",
+    "parcel": "parcel watch src/BPP/Main.ts --public-url /static/js/ --out-dir /home/clouds/clouds/custom/js --no-hmr",
+    "parcel-dist": "parcel build src/BPP/Main.ts --public-url /static/js/ --out-dir ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/validator-typescript": "^2.6.2",
+    "@types/jquery": "^3.5.5",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.5",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {}
+}
