@@ -17,14 +17,14 @@ export class Plugin extends PluginCore {
             The page itself is implemented in the _ServerSettingsPage.ts 
         */
         customerSettingsPage: {
-            id: "BPPCustomerSettings",
-            title: "BPP customer settings page",
-            type: "BPPcs",
+            id: "IIPCustomerSettings",
+            title: "IIP customer settings page",
+            type: "IIPcs",
             enabled: true,
             defaultSettings: {
                 myServerSetting: "default value for setting defined in Interfaces.ts",
             },
-            settingName: "BPP_settings",
+            settingName: "IIP_settings",
             help: "This is my help text",
             helpUrl:"https://docs23.matrixreq.com"
         },
@@ -32,14 +32,14 @@ export class Plugin extends PluginCore {
             The page itself is implemented in the _ProjectSetingsPage.ts 
         */
         projectSettingsPage: {
-            id: "BPPprojectsettings",
-            title: "BPP projectsettings page",
-            type:"BPPps",
+            id: "IIPprojectsettings",
+            title: "IIP projectsettings page",
+            type:"IIPps",
             enabled: true,
             defaultSettings: {
                 myProjectSetting:  "default value for setting defined in Interfaces.ts",
             },
-            settingName: "BPP_settings",
+            settingName: "IIP_settings",
             help: "This is my help text",
             helpUrl:"https://docs23.matrixreq.com"
         },
@@ -48,17 +48,17 @@ export class Plugin extends PluginCore {
         */
         menuToolItem: {
             enabled: true,
-            title:"matrix-ui-plugin-boilerplate-menuitem",
+            title:"ui_plugin_import_from_other_project-menuitem",
         },
         /*  Add a custom field to enter some data in the UI - set enabled to false if not needed.
             The field itself is implemented in the _Control.ts 
         */
         field: {
             enabled: true,
-            fieldType: "matrix-ui-plugin-boilerplate",
-            title: "matrix-ui-plugin-boilerplate-field",
+            fieldType: "ui_plugin_import_from_other_project",
+            title: "ui_plugin_import_from_other_project-field",
             fieldConfigOptions: {
-                id: "matrix-ui-plugin-boilerplate",
+                id: "ui_plugin_import_from_other_project",
                 capabilities: {
                     canBePublished: false,
                     canBeReadonly: true,
@@ -69,7 +69,7 @@ export class Plugin extends PluginCore {
                 },
                 class: "",
                 help: "",
-                label: "matrix-ui-plugin-boilerplate-field",
+                label: "ui_plugin_import_from_other_project-field",
             }
         },
         /*  Add a dashboard inside a project - set enabled to false if not needed.
@@ -77,8 +77,8 @@ export class Plugin extends PluginCore {
         */
         dashboard: {        
             
-            id:"BPP",
-            title: "BPP dashboard page",
+            id:"IIP",
+            title: "IIP dashboard page",
             enabled: true,
             icon: "fal fa-cog",
             parent: "DASHBOARDS",
