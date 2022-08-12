@@ -53,8 +53,8 @@ export class Tool{
                 }
             }], UIToolsEnum.Scroll.Vertical, true, true, function () {
             dlg.remove();
-        }, function () {
-        }, function () { });
+        }, function () { /* lint */
+        }, function () { /* lint */});
 
 
         // prepare the copy
@@ -151,7 +151,7 @@ export class Tool{
         return new Promise( (resolve, reject) => {
             restConnection.getServer( `${sourceProject}/needle?search=mrql%3A${itemOrFolder.indexOf("F-")==0?"folderm":"id"}%3D%20${itemOrFolder}&links=down&treeOrder=1`).done( (tn:XRTrimNeedle) => {
                 resolve( tn.needles );
-            });;
+            });
         });
     }
 
@@ -162,7 +162,7 @@ export class Tool{
             restConnection.postServer( sourceProject + "/copy/" + itemOrFolder, params).done( function( newFolderItems ) {
                 console.log( newFolderItems );
                 // (return type is not correct in docu/api)
-                let newItems = (<any>newFolderItems).itemsAndFoldersCreated.filter( nfo => nfo.indexOf("F-")!=0); //  only interested in created item 
+                let newItems = (<any><unknown>newFolderItems).itemsAndFoldersCreated.filter( nfo => nfo.indexOf("F-")!=0); //  only interested in created item 
                 resolve(newItems);
             });
         });
