@@ -20,7 +20,7 @@ export class Plugin extends PluginCore {
             id: "IIPCustomerSettings",
             title: "IIP customer settings page",
             type: "IIPcs",
-            enabled: true,
+            enabled: false,
             defaultSettings: {
                 myServerSetting: "default value for setting defined in Interfaces.ts",
             },
@@ -35,7 +35,7 @@ export class Plugin extends PluginCore {
             id: "IIPprojectsettings",
             title: "IIP projectsettings page",
             type:"IIPps",
-            enabled: true,
+            enabled: false,
             defaultSettings: {
                 myProjectSetting:  "default value for setting defined in Interfaces.ts",
             },
@@ -48,13 +48,13 @@ export class Plugin extends PluginCore {
         */
         menuToolItem: {
             enabled: true,
-            title:"ui_plugin_import_from_other_project-menuitem",
+            title:"Import",
         },
         /*  Add a custom field to enter some data in the UI - set enabled to false if not needed.
             The field itself is implemented in the _Control.ts 
         */
         field: {
-            enabled: true,
+            enabled: false,
             fieldType: "ui_plugin_import_from_other_project",
             title: "ui_plugin_import_from_other_project-field",
             fieldConfigOptions: {
@@ -79,7 +79,7 @@ export class Plugin extends PluginCore {
             
             id:"IIP",
             title: "IIP dashboard page",
-            enabled: true,
+            enabled: false,
             icon: "fal fa-cog",
             parent: "DASHBOARDS",
             usefilter: true,

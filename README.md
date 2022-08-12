@@ -1,37 +1,18 @@
-# ui_plugin_import_from_other_project plugin
+# matrix-ui-plugin-boilerplate plugin
 
-![Plugin Build](https://github.com/MatrixRequirements/ui_plugin_import_from_other_project/actions/workflows/main.yml/badge.svg)
+This plugin adds a menu to folders:
+When selected it opens a project/item selection dialog
+the user can select the root items from one category
+IF more than one category -> error
+afterwards the user can select other categories (downlink targets) -
+IF on of the categories does not exist locally error
 
-Matrix UI Plugins are implementations of the IPlugin interface.
-They can be registered in the plugin manager at startup and will be queried
-in different situations, for example to add new UI Controls or entries to 
-the tree or pages in the adminConfig.
+the software builds a list of items to copy, 
+all selected root items/folders from the first selection
+all downlinked items + all their parent folders (until there is a common root)
 
-This  example registers a new Dashboard, a control, an action in the action menu, a config page on the project level and a config page at the serverSetting level. You can use this project as template for other plugin. 
-
-It can be compiled using the standard
-Typescript build process into a single JS file and loaded into Matrix.
+all items and folders are copied
+all links are create in the target
 
 
-## Installation
-To simplify installation without requiring disk access to a Matrix instance
-you can use a special developer setup and a GitHub action to build the code.
 
-* Use this project as template
-* Go to the CI action and start the workflow [rename the project from template](../..//actions/workflows/template.yaml) 
-* Modify the code and check it into GitHub
-* Make sure the build succeeds (look [here](../../actions/workflows/main.yml))
-* Login into the [developer instance](https://developer.matrixreq.net)
-* Create a new UI entry in the 
-  [PLUGINS project](https://developer.matrixreq.net/PLUGINS/F-UI-2)
-* Press the Install"  button
-* Reload the browser
-
-This should install the script on the server and load it into the browser. The
-naming reflects the repository name, for example `https://developer.matrixreq.net/static/js/GitHub-MatrixRequirements_boiler-plate.js`
-
-## APIs
-Matrix has a very large set of APIs which you can explore in the interface definitions
-in the lib directory. To simplify the start there are some wrappers around common 
-calls in the src/api directory. The intention is to make these a smaller but better
-documented set of often used APIs. Let us know if you're missing something!
